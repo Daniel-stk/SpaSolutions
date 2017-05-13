@@ -1,0 +1,13 @@
+C:\Users\Xaandia\Documents\Visual Studio 2015\Projects\StkWorkspace\SpaSoultions\ServiceDomain\obj\Debug\ServiceDomain.csprojResolveAssemblyReference.cache
+C:\Users\Xaandia\Documents\Visual Studio 2015\Projects\StkWorkspace\SpaSoultions\ServiceDomain\bin\Debug\ServiceDomain.dll
+C:\Users\Xaandia\Documents\Visual Studio 2015\Projects\StkWorkspace\SpaSoultions\ServiceDomain\bin\Debug\ServiceDomain.pdb
+C:\Users\Xaandia\Documents\Visual Studio 2015\Projects\StkWorkspace\SpaSoultions\ServiceDomain\bin\Debug\AutoMapper.dll
+C:\Users\Xaandia\Documents\Visual Studio 2015\Projects\StkWorkspace\SpaSoultions\ServiceDomain\bin\Debug\DataModel.dll
+C:\Users\Xaandia\Documents\Visual Studio 2015\Projects\StkWorkspace\SpaSoultions\ServiceDomain\bin\Debug\Gateway.dll
+C:\Users\Xaandia\Documents\Visual Studio 2015\Projects\StkWorkspace\SpaSoultions\ServiceDomain\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Xaandia\Documents\Visual Studio 2015\Projects\StkWorkspace\SpaSoultions\ServiceDomain\bin\Debug\DataModel.pdb
+C:\Users\Xaandia\Documents\Visual Studio 2015\Projects\StkWorkspace\SpaSoultions\ServiceDomain\bin\Debug\Gateway.pdb
+C:\Users\Xaandia\Documents\Visual Studio 2015\Projects\StkWorkspace\SpaSoultions\ServiceDomain\bin\Debug\AutoMapper.xml
+C:\Users\Xaandia\Documents\Visual Studio 2015\Projects\StkWorkspace\SpaSoultions\ServiceDomain\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Xaandia\Documents\Visual Studio 2015\Projects\StkWorkspace\SpaSoultions\ServiceDomain\obj\Debug\ServiceDomain.dll
+C:\Users\Xaandia\Documents\Visual Studio 2015\Projects\StkWorkspace\SpaSoultions\ServiceDomain\obj\Debug\ServiceDomain.pdb

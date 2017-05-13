@@ -1,0 +1,113 @@
+﻿<UserControl x:Class="SpaSolutions.View.MainMenuView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SpaSolutions.View"
+             xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <Style x:Key="JumboTileStyle" TargetType="Controls:Tile">
+            <Setter Property="Width" Value="300"/>
+            <Setter Property="Height" Value="180"/>
+            <Setter Property="TitleFontSize" Value="20"/>
+        </Style>
+
+        <Style x:Key="LargeTileStyle" TargetType="Controls:Tile">
+            <Setter Property="Width" Value="300" />
+            <Setter Property="Height" Value="90" />
+            <Setter Property="TitleFontSize" Value="10" />
+        </Style>
+
+        <Style x:Key="SmallTileStyle" TargetType="Controls:Tile">
+            <Setter Property="Width" Value="150" />
+            <Setter Property="Height" Value="90" />
+            <Setter Property="TitleFontSize" Value="10" />
+        </Style>
+    </UserControl.Resources>
+    <Grid><!--Main Grid-->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width=".05*"/>
+            <ColumnDefinition Width=".9*"/>
+            <ColumnDefinition Width=".05*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".1*"/>
+            <RowDefinition Height=".8*"/>
+            <RowDefinition Height=".1"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Column="1"
+                   VerticalAlignment="Center"
+                   Text="Opciones"
+                   FontWeight="Light"
+                   FontSize="30"
+                   FontFamily="Segoe UI" /><!--Title-->
+
+        <Grid Grid.Column="1" Grid.Row="1"><!--Main Content Grid-->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.ColumnSpan="2" VerticalAlignment="Top" HorizontalAlignment="Left"><!--Main Tools Grid-->
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                
+                <TextBlock 
+                   VerticalAlignment="Top"
+                   Text="Principal"
+                   FontWeight="Light"
+                   FontSize="20"
+                   FontFamily="Segoe UI" />
+
+                <Controls:Tile Grid.Row="1" Grid.RowSpan="2" Title="Punto de Venta" Style="{StaticResource JumboTileStyle}" Command="{Binding Path=LoadRetailPointPageCommand}" Content="ImageHere"/>
+                <Controls:Tile Grid.Row="1" Grid.Column="1" Grid.RowSpan="2" Title="Agenda/Citas" Style="{StaticResource JumboTileStyle}" Command="{Binding Path=LoadAgendaPageCommand}" />
+                <Controls:Tile Grid.Column="2" Grid.Row="1" Title="Clientes" Grid.RowSpan="2" Style="{StaticResource JumboTileStyle}" Command="{Binding Path=LoadClientsPageCommand}" />
+                <Controls:Tile Grid.Column="3" Grid.Row="1" Grid.RowSpan="2" Title="WalkIn Manager" Style="{StaticResource JumboTileStyle}" Command="{Binding Path=LoadWalkInManagerPageCommand}"/>
+            </Grid><!--End Main Tools Grid-->
+
+            <Grid Grid.Row="1" Grid.ColumnSpan="2" VerticalAlignment="Top" HorizontalAlignment="Left"><!--Administrative Tools Grid-->
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock 
+                   VerticalAlignment="Top"
+                   Text="Control Administrativo"
+                   FontWeight="Light"
+                   FontSize="20"
+                   FontFamily="Segoe UI" />
+
+                <Controls:Tile Grid.Row="1" Grid.RowSpan="2" Title="Administrador de Servicios" Style="{StaticResource JumboTileStyle}" Command="{Binding Path=LoadServiceAdministrationPageCommand}" Content="ImageHere"/>
+                <Controls:Tile Grid.Row="1" Grid.Column="1" Grid.RowSpan="2" Title="Administrador de Inventario" Style="{StaticResource JumboTileStyle}" Command="{Binding Path=LoadInventoryAdministrationPageCommand}"  />
+                <Controls:Tile Grid.Row="1" Grid.Column="2" Grid.RowSpan="2" Title="Administrador de Empleados" Style="{StaticResource JumboTileStyle}" Command="{Binding Path=LoadEmployeesAdministrationPageCommand}" />
+                <Controls:Tile Grid.Row="1" Grid.Column="3"  Title="Sistema de Lealtad" Style="{StaticResource LargeTileStyle}" Content="ImageHere" Command="{Binding Path=LoadLoyaltySystemPageCommand}"/>
+                <Controls:Tile Grid.Row="2" Grid.Column="3" Title="Reportes" Style="{StaticResource LargeTileStyle}" Command="{Binding Path=LoadReportsSystemPageCommand}"/>
+            </Grid><!--End Administrative Tools Grid-->
+
+        </Grid>
+    </Grid><!--End Main Grid-->
+</UserControl>

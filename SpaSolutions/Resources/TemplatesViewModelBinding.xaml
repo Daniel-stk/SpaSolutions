@@ -1,0 +1,36 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:SpaSolutions.Resources"
+                    xmlns:view="clr-namespace:SpaSolutions.View"
+                    xmlns:viewmodel="clr-namespace:SpaSolutions.ViewModel">
+    <DataTemplate DataType="{x:Type viewmodel:MainMenuViewModel}">
+        <view:MainMenuView/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type viewmodel:ClientsPageViewModel}">
+        <view:ClientsPageView/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type viewmodel:AgendaPageViewModel}">
+        <view:AgendaPageView/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type viewmodel:EmployeesAdministrationPageViewModel}">
+        <view:EmployeesAdministrationPageView/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type viewmodel:InventoryAdministrationPageViewModel}">
+        <view:InventoryAdministrationPageView/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type viewmodel:LoyaltySystemPageViewModel}">
+        <view:LoyaltySystemPageView/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type viewmodel:ReportsSystemPageViewModel}">
+        <view:ReportsSystemPageView/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type viewmodel:RetailPointPageViewModel}">
+        <view:RetailPointPageView/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type viewmodel:ServiceAdministrationPageViewModel}">
+        <view:ServiceAdministrationPageView/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type view:WalkInManagerPageView}">
+        <view:WalkInManagerPageView/>
+    </DataTemplate>
+</ResourceDictionary>
