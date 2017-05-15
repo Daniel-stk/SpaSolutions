@@ -18,4 +18,26 @@ namespace Gateway.Response
         [JsonProperty("data")]
         public List<T> Data { get; set; }
     }
+
+    public class SingleResponse<T>
+    {
+        [JsonProperty("error")]
+        public int Error { get; set; }
+        [JsonProperty("success")]
+        public int Success { get; set; }
+        [JsonProperty("msg")]
+        public string Message { get; set; }
+        [JsonProperty("data")]
+        public T Data { get; set; }
+    }
+
+    public class SimpleResponse
+    {
+        [JsonProperty("error")]
+        public int Error { get; set; }
+        [JsonProperty("success")]
+        public int Success { get; set; }
+        [JsonProperty("msg")]
+        public string Message { get; set; }
+    }
 }

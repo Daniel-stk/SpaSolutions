@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SpaSolutions"
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:tool="clr-namespace:SpaSolutions.Tools"
         ShowIconOnTitleBar="True"
         mc:Ignorable="d"
         Title="Spa Solutions" Height="350" Width="525" WindowState="Maximized">
@@ -15,6 +16,7 @@
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
+    
     <Controls:MetroWindow.RightWindowCommands>
         <Controls:WindowCommands>
             <Button Content="settings" />
@@ -34,13 +36,9 @@
             </Button>
         </Controls:WindowCommands>
     </Controls:MetroWindow.RightWindowCommands>
-    <Controls:MetroWindow.Flyouts>
-        <Controls:FlyoutsControl>
-            <Controls:Flyout Header="Flyout" Position="Right" Width="200">
-                <!-- Your custom content here -->
-            </Controls:Flyout>
-        </Controls:FlyoutsControl>
-    </Controls:MetroWindow.Flyouts>
+
+    
+
     <Grid>
         <Controls:TransitioningContentControl  Content="{Binding CurrentView}" x:Name="transitioning" Transition="{Binding Animation}" />
     </Grid>

@@ -24,7 +24,14 @@
                     <ColumnDefinition Width=".9*"/>
                     <ColumnDefinition Width=".05*"/>
                 </Grid.ColumnDefinitions>
-            <TextBlock 
+                <Button Width="42"
+                        Height="42"
+                        Style="{DynamicResource MetroCircleButtonStyle}"
+                        HorizontalAlignment="Center" VerticalAlignment="Center"
+                        Command="{Binding ReturnToMainMenuCommand}">
+                        <iconPacks:PackIconMaterial Kind="ArrowLeftBoldCircleOutline" Width="32" Height="32" Foreground="White"/>
+                </Button>
+                <TextBlock 
                    Grid.Column="1"
                    VerticalAlignment="Center"
                    Text="Clientes"
@@ -63,6 +70,9 @@
                 </Grid>
                 
                 <Grid Background="White"  Margin="5 10 5 10" Height="Auto">
+                    <Grid.InputBindings>
+                        <MouseBinding Gesture="LeftDoubleClick" Command="{Binding ClientsWhitOpenSales}"/>
+                    </Grid.InputBindings>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="*"/>
@@ -79,6 +89,9 @@
                 </Grid>
                 
                 <Grid Background="White"  Margin="5 10 5 10" Height="Auto">
+                    <Grid.InputBindings>
+                        <MouseBinding Gesture="LeftDoubleClick" Command="{Binding ClientsWithAppointmens}"/>
+                    </Grid.InputBindings>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="*"/>
@@ -90,23 +103,14 @@
                     </Grid.RowDefinitions>
 
                     <Label FontWeight="DemiBold" Grid.ColumnSpan="2" FontSize="15" HorizontalAlignment="Center">Citas de Hoy</Label>
-                    <iconPacks:PackIconFontAwesome Grid.Row="1" Kind="Usd" HorizontalAlignment="Center" VerticalAlignment="Center" Height="64" Width="64"/>
+                    <iconPacks:PackIconFontAwesome Grid.Row="1" Kind="AddressBook" HorizontalAlignment="Center" VerticalAlignment="Center" Height="64" Width="64"/>
                     <Label Grid.Column="1" Grid.Row="1" FontSize="30" FontWeight="DemiBold" Content="{Binding TodaysAppointments}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                 </Grid>
                 
             </StackPanel>
-           
-            <TabControl>
-                <TabItem Header="Option 1">
-                  
-                </TabItem>
-                <TabItem Header="Option 1">
 
-                </TabItem>
-                <TabItem Header="Option 1">
+            <Controls:TransitioningContentControl  Content="{Binding CurrentAction}" x:Name="transitioning" Transition="RightReplace" />
 
-                </TabItem>
-            </TabControl>
         </DockPanel>
     </Grid>
 </UserControl>

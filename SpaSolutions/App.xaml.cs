@@ -1,4 +1,5 @@
 ﻿using MahApps.Metro;
+using SpaSolutions.Factory;
 using SpaSolutions.Tools;
 using SpaSolutions.ViewModel;
 using System;
@@ -30,7 +31,7 @@ namespace SpaSolutions
             ThemeManagerHelper.CreateAppStyleBy(Colors.Red);
             ThemeManagerHelper.CreateAppStyleBy(Colors.GreenYellow);
             ThemeManagerHelper.CreateAppStyleBy(Colors.Indigo, true);
-            var window = new MainWindow() { DataContext = MainWindowViewModel.Instance };
+            var window = new MainWindow() { DataContext = MainWindowViewModel.Instance};
             window.Show();
         }
     }

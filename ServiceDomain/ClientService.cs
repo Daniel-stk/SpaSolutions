@@ -1,19 +1,27 @@
 ﻿using Gateway;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 using DataModel.InformationModels;
 using ServiceDomain.Exceptions;
 using System.Collections.ObjectModel;
+using Gateway.DataTransferObjects;
+using AutoMapper;
+using Gateway.Response;
 
 namespace ServiceDomain
 {
     public class ClientService
     {
         private ClientGateway _gateway;
+        private IMapper _mapper;
 
         public ClientService()
         {
             _gateway = new ClientGateway();
+            var mapperConfig = new MapperConfiguration(cfg => {
+                cfg.CreateMap<Client, ClientDto>();
+                cfg.CreateMap<ClientDataSetResponse, Client>();
+            });
+            _mapper = mapperConfig.CreateMapper();
         }
         
         public async Task<ObservableCollection<Client>> GetAllClients()
@@ -24,21 +32,24 @@ namespace ServiceDomain
             {
                 foreach (var client in response.Data)
                 {
-                    clients.Add(new Client()
-                    {
-                        ClientId = client.ClientId,
-                        ClientName = client.ClientName,
-                        ClientCellPhone = client.ClientCellPhone,
-                        ClientPhone = client.ClientPhone,
-                        ClientAddress = client.ClientAddress,
-                        ClientEmail = client.ClientEmail
-                    });
+                    clients.Add(_mapper.Map<ClientDataSetResponse,Client>(client));
                 }
             }else
             {
                 throw new NoResponseException("El endpoint no respondio al request");
             }
             return clients;
+        }
+
+        public async Task<bool> InsertOrEditClient(Client client)
+        {
+            var clientDto = _mapper.Map<Client, ClientDto>(client);
+            return await _gateway.ClientActions(clientDto);
+        }
+
+        public async Task<bool> DeleteClient(Client client)
+        {
+            return await _gateway.DeleteClient(client.ClientId);
         }
     }
 }

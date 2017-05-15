@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Globalization;
 using DebuggingTools;
+using System.Windows.Controls;
 
 namespace SpaSolutions.Tools
 {
@@ -317,4 +318,5 @@ namespace SpaSolutions.Tools
             throw new NotImplementedException();
         }
     }
+
 }

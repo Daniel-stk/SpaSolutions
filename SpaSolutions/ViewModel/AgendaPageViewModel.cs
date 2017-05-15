@@ -2,5 +2,9 @@
 {
     internal class AgendaPageViewModel : ViewModelBase
     {
+        public AgendaPageViewModel()
+        {
+
+        }
     }
 }

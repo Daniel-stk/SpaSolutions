@@ -17,3 +17,22 @@ C:\Users\Xaandia\Documents\Visual Studio 2015\Projects\StkWorkspace\SpaSoultions
 C:\Users\Xaandia\Documents\Visual Studio 2015\Projects\StkWorkspace\SpaSoultions\Gateway\obj\Debug\Gateway.csprojResolveAssemblyReference.cache
 C:\Users\Xaandia\Documents\Visual Studio 2015\Projects\StkWorkspace\SpaSoultions\Gateway\obj\Debug\Gateway.dll
 C:\Users\Xaandia\Documents\Visual Studio 2015\Projects\StkWorkspace\SpaSoultions\Gateway\obj\Debug\Gateway.pdb
+C:\Users\Usuario\Source\Workspaces\SpaSolutions\Gateway\bin\Debug\Gateway.dll.config
+C:\Users\Usuario\Source\Workspaces\SpaSolutions\Gateway\bin\Debug\Gateway.dll
+C:\Users\Usuario\Source\Workspaces\SpaSolutions\Gateway\bin\Debug\Gateway.pdb
+C:\Users\Usuario\Source\Workspaces\SpaSolutions\Gateway\bin\Debug\AutoMapper.dll
+C:\Users\Usuario\Source\Workspaces\SpaSolutions\Gateway\bin\Debug\DataModel.dll
+C:\Users\Usuario\Source\Workspaces\SpaSolutions\Gateway\bin\Debug\DebuggingTools.dll
+C:\Users\Usuario\Source\Workspaces\SpaSolutions\Gateway\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Usuario\Source\Workspaces\SpaSolutions\Gateway\bin\Debug\System.Net.Http.Extensions.dll
+C:\Users\Usuario\Source\Workspaces\SpaSolutions\Gateway\bin\Debug\System.Net.Http.Primitives.dll
+C:\Users\Usuario\Source\Workspaces\SpaSolutions\Gateway\bin\Debug\DataModel.pdb
+C:\Users\Usuario\Source\Workspaces\SpaSolutions\Gateway\bin\Debug\DebuggingTools.pdb
+C:\Users\Usuario\Source\Workspaces\SpaSolutions\Gateway\bin\Debug\AutoMapper.xml
+C:\Users\Usuario\Source\Workspaces\SpaSolutions\Gateway\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Usuario\Source\Workspaces\SpaSolutions\Gateway\bin\Debug\System.Net.Http.Extensions.xml
+C:\Users\Usuario\Source\Workspaces\SpaSolutions\Gateway\bin\Debug\System.Net.Http.Primitives.xml
+C:\Users\Usuario\Source\Workspaces\SpaSolutions\Gateway\obj\Debug\Gateway.csproj.App.config
+C:\Users\Usuario\Source\Workspaces\SpaSolutions\Gateway\obj\Debug\Gateway.csprojResolveAssemblyReference.cache
+C:\Users\Usuario\Source\Workspaces\SpaSolutions\Gateway\obj\Debug\Gateway.dll
+C:\Users\Usuario\Source\Workspaces\SpaSolutions\Gateway\obj\Debug\Gateway.pdb

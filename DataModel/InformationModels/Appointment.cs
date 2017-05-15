@@ -14,6 +14,10 @@ namespace DataModel.InformationModels
         public TimeSpan AppointmentStart { get; set; }
         public TimeSpan AppointmentEnd { get; set; }
         public bool Active { get; set;}
+        public int ServiceId { get; set; }
+        public int EmployeeId { get; set; }
+        public int WorkspaceId { get; set; }
+        public int ClientId { get; set; }
         public Service Service { get; set; }
         public Employee Employee { get; set; }
         public Workspace Workspace { get; set; }

@@ -1,21 +1,28 @@
 ﻿using DataModel.InformationModels;
-using DebuggingTools;
 using ServiceDomain;
+using SpaSolutions.Factory;
+using SpaSolutions.PartialViewModels.Clients;
 using SpaSolutions.Tools;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Windows.Input;
 
 namespace SpaSolutions.ViewModel
 {
     internal class ClientsPageViewModel : ViewModelBase
     {
-        private ClientService service;
+        private ClientService _service;
+        private ObservableCollection<Client> _clients;
         private int _clientsQuantity;
         private int _salesOnProcess;
         private int _todaysAppointmens;
+        private ViewModelBase _currentAction;
 
         public TaskWatcher<ObservableCollection<Client>> GetClientsTask { get; private set; }
+        public ICommand ReturnToMainMenuCommand { get; private set; }
 
+        public ObservableCollection<Client> Clients { get { return _clients; } private set { _clients = value; } }
+        
+        public ClientService Service { get { return _service; } private set { _service = value; } }
         public int ClientsQuantity
         {
             get
@@ -55,17 +62,34 @@ namespace SpaSolutions.ViewModel
             }
         }
 
+        public ViewModelBase CurrentAction
+        {
+            get { return _currentAction; }
+            set { _currentAction = value; OnPropertyChanged("CurrentAction"); }
+        }
+
 
         public ClientsPageViewModel()
         {
-            service = new ClientService();
-            GetClientsTask = new TaskWatcher<ObservableCollection<Client>>(service.GetAllClients());
+            ReturnToMainMenuCommand = new DelegateCommand(o => ReturnToMainMenu());
+            Service = new ClientService();
+            GetClientsTask = new TaskWatcher<ObservableCollection<Client>>(Service.GetAllClients());
             GetClientsTask.Task.GetAwaiter().OnCompleted(() => PopulateBindingData());
         }
 
         private void PopulateBindingData()
         {
-            var result = GetClientsTask.Result;
+            Clients = GetClientsTask.Result;
+            ClientsQuantity = Clients.Count;
+            CurrentAction = new ClientsListViewModel(Clients);
         }
+
+        private void ReturnToMainMenu()
+        {
+            MainWindowViewModel.Instance.Animation = "RIGHT";
+            MainWindowViewModel.Instance.CurrentView = ViewModelFactory<MainMenuViewModel>.GetView("MainMenu");
+        }
+
+       
     }
 }

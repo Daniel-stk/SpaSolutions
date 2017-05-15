@@ -1,0 +1,41 @@
+﻿<UserControl x:Class="SpaSolutions.PartialView.Clients.ClientsList"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SpaSolutions.PartialView.Clients"
+             xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="600">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width=".05*"/>
+            <ColumnDefinition Width=".9*"/>
+            <ColumnDefinition Width=".05*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".1*"/>
+            <RowDefinition Height=".85*"/>
+            <RowDefinition Height=".05*"/>
+        </Grid.RowDefinitions>
+
+        <Button Width="52"
+                        Height="52"
+                        Grid.Column="1"
+                        Command="{Binding AddClientCommand}"
+                        Style="{DynamicResource MetroCircleButtonStyle}"
+                        HorizontalAlignment="Right" VerticalAlignment="Center">
+            <iconPacks:PackIconMaterial Kind="AccountPlus" Width="32" Height="32" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Button>
+        <DataGrid Grid.Row="1" Grid.Column="1" ItemsSource="{Binding Clients}" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn  Binding="{Binding ClientName}" Header="Nombre"/>
+                <DataGridTextColumn  Binding="{Binding ClientAddress}" Header="Direccion"/>
+                <DataGridTextColumn  Binding="{Binding ClientPhone}" Header="Telefono"/>
+                <DataGridTextColumn  Binding="{Binding ClientCellPhone}" Header="Celular"/>
+                <DataGridTextColumn Binding="{Binding ClientEmail}" Header="Correo"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</UserControl>

@@ -2,5 +2,9 @@
 {
     internal class ServiceAdministrationPageViewModel : ViewModelBase
     {
+        public ServiceAdministrationPageViewModel()
+        {
+
+        }
     }
 }

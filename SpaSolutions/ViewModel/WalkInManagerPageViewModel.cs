@@ -2,5 +2,9 @@
 {
     internal class WalkInManagerPageViewModel : ViewModelBase
     {
+        public WalkInManagerPageViewModel()
+        {
+
+        }
     }
 }

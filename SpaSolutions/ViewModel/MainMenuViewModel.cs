@@ -1,4 +1,5 @@
-﻿using SpaSolutions.Tools;
+﻿using SpaSolutions.Factory;
+using SpaSolutions.Tools;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -38,55 +39,57 @@ namespace SpaSolutions.ViewModel
 
         private void LoadAgendaPage()
         {
-            MainWindowViewModel.Instance.Animation = "Up";
-            MainWindowViewModel.Instance.CurrentView = new AgendaPageViewModel();
+
+            MainWindowViewModel.Instance.Animation = "LEFT";
+            MainWindowViewModel.Instance.CurrentView = ViewModelFactory<AgendaPageViewModel>.GetView("AgendaPage");     
         }
 
         private void LoadRetailPointPage()
         {
-            MainWindowViewModel.Instance.Animation = "Up";
-            MainWindowViewModel.Instance.CurrentView = new RetailPointPageViewModel();
+            MainWindowViewModel.Instance.Animation = "LEFT";
+            MainWindowViewModel.Instance.CurrentView = ViewModelFactory<RetailPointPageViewModel>.GetView("RetailPointPage");
         }
 
         private void LoadClientsPage()
         {
-            MainWindowViewModel.Instance.Animation = "Up";
-            MainWindowViewModel.Instance.CurrentView = new ClientsPageViewModel();
+            MainWindowViewModel.Instance.Animation = "LEFT";
+            MainWindowViewModel.Instance.CurrentView = ViewModelFactory<ClientsPageViewModel>.GetView("ClientsPage");
         }
 
         private void LoadWalkInManagerPage()
         {
-            MainWindowViewModel.Instance.Animation = "Up";
-            MainWindowViewModel.Instance.CurrentView = new WalkInManagerPageViewModel();
+            MainWindowViewModel.Instance.Animation = "LEFT";
+            MainWindowViewModel.Instance.CurrentView = ViewModelFactory<WalkInManagerPageViewModel>.GetView("WalkInManagerPage");
         }
 
         private void LoadServiceAdministrationPage()
         {
-            MainWindowViewModel.Instance.Animation = "Up";
-            MainWindowViewModel.Instance.CurrentView = new ServiceAdministrationPageViewModel();
+            MainWindowViewModel.Instance.Animation = "LEFT";
+            MainWindowViewModel.Instance.CurrentView = ViewModelFactory<ServiceAdministrationPageViewModel>.GetView("ServiceAdministratorPage");
         }
 
         private void LoadInventoryAdministrationPage()
         {
-            MainWindowViewModel.Instance.CurrentView = new InventoryAdministrationPageViewModel();
+            MainWindowViewModel.Instance.Animation = "LEFT";
+            MainWindowViewModel.Instance.CurrentView = ViewModelFactory<InventoryAdministrationPageViewModel>.GetView("InventoryAdministrationPage");
         }
 
         private void LoadEmployeesAdministrationPage()
         {
-            MainWindowViewModel.Instance.Animation = "Up";
-            MainWindowViewModel.Instance.CurrentView = new EmployeesAdministrationPageViewModel();
+            MainWindowViewModel.Instance.Animation = "LEFT";
+            MainWindowViewModel.Instance.CurrentView = ViewModelFactory<EmployeesAdministrationPageViewModel>.GetView("EmployeesAdministrationPage");
         }
 
         private void LoadLoyaltySystemPage()
         {
-            MainWindowViewModel.Instance.Animation = "Up";
-            MainWindowViewModel.Instance.CurrentView = new LoyaltySystemPageViewModel();
+            MainWindowViewModel.Instance.Animation = "LEFT";
+            MainWindowViewModel.Instance.CurrentView = ViewModelFactory<LoyaltySystemPageViewModel>.GetView("LoyaltySystemPage");
         }
 
         private void LoadReportsSystemPage()
         {
-            MainWindowViewModel.Instance.Animation = "Up";
-            MainWindowViewModel.Instance.CurrentView = new ReportsSystemPageViewModel();
+            MainWindowViewModel.Instance.Animation = "LEFT";
+            MainWindowViewModel.Instance.CurrentView = ViewModelFactory<ReportsSystemPageViewModel>.GetView("ReportsSystemPage");
         }
     }
 }

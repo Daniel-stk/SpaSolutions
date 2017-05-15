@@ -2,5 +2,9 @@
 {
     internal class EmployeesAdministrationPageViewModel : ViewModelBase
     {
+        public EmployeesAdministrationPageViewModel()
+        {
+
+        }
     }
 }

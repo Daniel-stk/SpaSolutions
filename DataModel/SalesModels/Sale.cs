@@ -17,6 +17,7 @@ namespace DataModel.SalesModels
         public bool PartialPayments { get; set; }
         public int NumberOfPayments { get; set; }
         public int ReceivedPayments { get; set; }
+        public int ClientId { get; set; }
         public Client Client { get; set; }
     }
 }

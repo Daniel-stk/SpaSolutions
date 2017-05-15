@@ -2,5 +2,9 @@
 {
     internal class InventoryAdministrationPageViewModel : ViewModelBase
     {
+        public InventoryAdministrationPageViewModel()
+        {
+
+        }
     }
 }

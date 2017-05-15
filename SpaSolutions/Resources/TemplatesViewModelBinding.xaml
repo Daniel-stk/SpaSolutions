@@ -2,7 +2,10 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:local="clr-namespace:SpaSolutions.Resources"
                     xmlns:view="clr-namespace:SpaSolutions.View"
-                    xmlns:viewmodel="clr-namespace:SpaSolutions.ViewModel">
+                    xmlns:viewmodel="clr-namespace:SpaSolutions.ViewModel"
+                    xmlns:partialview="clr-namespace:SpaSolutions.PartialView.Clients"
+                    xmlns:partialviewmodel="clr-namespace:SpaSolutions.PartialViewModels.Clients"
+                    >
     <DataTemplate DataType="{x:Type viewmodel:MainMenuViewModel}">
         <view:MainMenuView/>
     </DataTemplate>
@@ -32,5 +35,11 @@
     </DataTemplate>
     <DataTemplate DataType="{x:Type view:WalkInManagerPageView}">
         <view:WalkInManagerPageView/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type partialviewmodel:ClientsFormViewModel}">
+        <partialview:ClientsForm/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type partialviewmodel:ClientsListViewModel}">
+        <partialview:ClientsList/>
     </DataTemplate>
 </ResourceDictionary>

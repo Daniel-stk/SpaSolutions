@@ -1,14 +1,11 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Gateway.DataTransferObjects
 {
-    internal class ClientDto
+    public class ClientDto
     {
+        [JsonProperty("client_id")]
+        public int ClientId { get; set; }
         [JsonProperty("client_name")]
         public string ClientName { get; set; }
         [JsonProperty("client_address")]

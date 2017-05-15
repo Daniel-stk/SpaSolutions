@@ -2,5 +2,9 @@
 {
     internal class RetailPointPageViewModel : ViewModelBase
     {
+        public RetailPointPageViewModel()
+        {
+
+        }
     }
 }

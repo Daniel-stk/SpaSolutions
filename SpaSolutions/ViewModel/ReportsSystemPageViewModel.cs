@@ -2,5 +2,9 @@
 {
     internal class ReportsSystemPageViewModel : ViewModelBase
     {
+        public ReportsSystemPageViewModel()
+        {
+
+        }
     }
 }
