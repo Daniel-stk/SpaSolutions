@@ -41,13 +41,13 @@ namespace ServiceDomain
             return clients;
         }
 
-        public async Task<bool> InsertOrEditClient(Client client)
+        public async Task<SingleResponse<int>> InsertOrEditClient(Client client)
         {
             var clientDto = _mapper.Map<Client, ClientDto>(client);
             return await _gateway.ClientActions(clientDto);
         }
 
-        public async Task<bool> DeleteClient(Client client)
+        public async Task<SingleResponse<int>> DeleteClient(Client client)
         {
             return await _gateway.DeleteClient(client.ClientId);
         }

@@ -17,17 +17,17 @@ namespace Gateway
     {
         private HttpClient _httpClient;
         private string _baseAddress = "http://spasa.api/";
-        private string _endPoint = "Clients/API";
-
+        
         public async Task<Response<ClientDataSetResponse>> GetClientsList()
         {
             using (_httpClient = new HttpClient())
             {
+                var endPoint = "Clients/API/GetClients";
                 _httpClient.BaseAddress = new Uri(_baseAddress);
                 _httpClient.DefaultRequestHeaders.Accept.Clear();
                 _httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-                _httpClient.DefaultRequestHeaders.Add("Action", "GetClientsList");
-                var response = await _httpClient.GetAsync(_endPoint);
+
+                var response = await _httpClient.GetAsync(endPoint);
                 if (response.IsSuccessStatusCode)
                 {
                     var responseContent = await response.Content.ReadAsStringAsync();
@@ -38,58 +38,87 @@ namespace Gateway
             }
         }
 
-       public async Task<bool> ClientActions(ClientDto client)
+       public async Task<SingleResponse<int>> ClientActions(ClientDto client)
        {
             using (_httpClient = new HttpClient())
             {
+                var endPoint = "Clients/API/";
                 _httpClient.BaseAddress = new Uri(_baseAddress);
                 _httpClient.DefaultRequestHeaders.Clear();
-                _httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-                if (client.ClientId != 0)
+                _httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/x-www-form-urlencoded"));
+                if (client.ClientId == 0)
                 {
-                    _httpClient.DefaultRequestHeaders.Add("Action", "EditClient");
+                    endPoint += "AddClient";  
                 }
                 else
                 {
-                    _httpClient.DefaultRequestHeaders.Add("Action", "AddClient");
+                    endPoint += "EditClient";
                 }
-                var payload = new StringContent(JsonConvert.SerializeObject(client),Encoding.UTF8,"application)json");
-                
-                var response = await _httpClient.PostAsync(_endPoint,payload);
+              
+                var payload = EncodeContent(client); 
+                var response = await _httpClient.PostAsync(endPoint,payload);
                 if (response.IsSuccessStatusCode)
                 {
                     var responseContent = await response.Content.ReadAsStringAsync();
-                    var result = JsonConvert.DeserializeObject<SimpleResponse>(responseContent);
+                    var result = JsonConvert.DeserializeObject<SingleResponse<int>>(responseContent);
                     if(result.Success == 1)
                     {
-                        return true;
+                        return result;
                     }
+                    ConsoleManager.Show();
+                    Console.WriteLine(result.Message);
+                    Console.ReadKey();
                 }
-                return false;
+                return null;
             }
        }
 
-       public async Task<bool> DeleteClient(int clientId)
+       public async Task<SingleResponse<int>> DeleteClient(int clientId)
        {
             using (_httpClient = new HttpClient())
             {
+                var endPoint = "Clients/API/DeleteClient";
                 _httpClient.BaseAddress = new Uri(_baseAddress);
                 _httpClient.DefaultRequestHeaders.Clear();
-                _httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                _httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/x-www-form-urlencoded"));
 
-                var payload = new StringContent(JsonConvert.SerializeObject(new { client_id = clientId}),Encoding.UTF8,"application/json");
-                var response = await _httpClient.PostAsync(_endPoint, payload);
+                var payload = EncodeContent(clientId);
+                var response = await _httpClient.PostAsync(endPoint, payload);
                 if (response.IsSuccessStatusCode)
                 {
                     var responseContent = await response.Content.ReadAsStringAsync();
-                    var result = JsonConvert.DeserializeObject<SimpleResponse>(responseContent);
+                    var result = JsonConvert.DeserializeObject<SingleResponse<int>>(responseContent);
                     if (result.Success == 1)
                     {
-                        return true;
+                        return result;
                     }
+                    ConsoleManager.Show();
+                    Console.WriteLine(result.Message);
                 }
-                return false;
+                return null;
             }
-        } 
+        }
+        
+        private FormUrlEncodedContent EncodeContent(ClientDto client) 
+        {
+            var content = new List<KeyValuePair<string, string>>();
+            if(client.ClientId != 0)
+            {
+                content.Add(new KeyValuePair<string, string>("client_id", client.ClientId.ToString()));
+            }
+            content.Add(new KeyValuePair<string, string>("client_name", client.ClientName));
+            content.Add(new KeyValuePair<string, string>("client_address", client.ClientAddress));
+            content.Add(new KeyValuePair<string, string>("client_homephone", client.ClientPhone));
+            content.Add(new KeyValuePair<string, string>("client_cellphone", client.ClientCellPhone));
+            content.Add(new KeyValuePair<string, string>("client_email", client.ClientEmail));
+            return new FormUrlEncodedContent(content);
+        }
+
+        private FormUrlEncodedContent EncodeContent(int clientId)
+        {
+            var content = new List<KeyValuePair<string, string>>();
+            content.Add(new KeyValuePair<string, string>("client_id", clientId.ToString()));
+            return new FormUrlEncodedContent(content);
+        }
     }
 }

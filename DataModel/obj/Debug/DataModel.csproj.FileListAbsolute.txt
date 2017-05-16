@@ -8,3 +8,7 @@ C:\Users\Usuario\Source\Workspaces\SpaSolutions\DataModel\bin\Debug\DataModel.pd
 C:\Users\Usuario\Source\Workspaces\SpaSolutions\DataModel\obj\Debug\DataModel.dll
 C:\Users\Usuario\Source\Workspaces\SpaSolutions\DataModel\obj\Debug\DataModel.pdb
 C:\Users\Usuario\Source\Workspaces\SpaSolutions\DataModel\obj\Debug\DataModel.csprojResolveAssemblyReference.cache
+C:\Users\Xaandia\Documents\Visual Studio 2015\Projects\StkWorkspace\Spasa\DataModel\bin\Debug\DataModel.dll
+C:\Users\Xaandia\Documents\Visual Studio 2015\Projects\StkWorkspace\Spasa\DataModel\bin\Debug\DataModel.pdb
+C:\Users\Xaandia\Documents\Visual Studio 2015\Projects\StkWorkspace\Spasa\DataModel\obj\Debug\DataModel.dll
+C:\Users\Xaandia\Documents\Visual Studio 2015\Projects\StkWorkspace\Spasa\DataModel\obj\Debug\DataModel.pdb

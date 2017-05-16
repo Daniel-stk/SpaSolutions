@@ -45,7 +45,7 @@
                 <RowDefinition Height="15"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <Controls:ProgressRing IsActive="{Binding ActionWatcher.IsNotCompleted}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Controls:ProgressRing IsActive="{Binding IsActionInProcess}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             <TextBlock 
                    VerticalAlignment="Center"
                    Text="Agregar Cliente"

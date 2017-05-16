@@ -3,8 +3,11 @@
                     xmlns:local="clr-namespace:SpaSolutions.Resources"
                     xmlns:view="clr-namespace:SpaSolutions.View"
                     xmlns:viewmodel="clr-namespace:SpaSolutions.ViewModel"
-                    xmlns:partialview="clr-namespace:SpaSolutions.PartialView.Clients"
-                    xmlns:partialviewmodel="clr-namespace:SpaSolutions.PartialViewModels.Clients"
+                    xmlns:partialviewclients="clr-namespace:SpaSolutions.PartialView.Clients"
+                    xmlns:partialviewmodelclients="clr-namespace:SpaSolutions.PartialViewModels.Clients"
+                    xmlns:partialviewemployees="clr-namespace:SpaSolutions.PartialView.Employees"
+                    xmlns:partialviewmodelemployees="clr-namespace:SpaSolutions.PartialViewModels.Employees"
+                    
                     >
     <DataTemplate DataType="{x:Type viewmodel:MainMenuViewModel}">
         <view:MainMenuView/>
@@ -33,13 +36,19 @@
     <DataTemplate DataType="{x:Type viewmodel:ServiceAdministrationPageViewModel}">
         <view:ServiceAdministrationPageView/>
     </DataTemplate>
-    <DataTemplate DataType="{x:Type view:WalkInManagerPageView}">
-        <view:WalkInManagerPageView/>
+    <DataTemplate DataType="{x:Type viewmodel:WorkspacePageViewModel}">
+        <view:WorkspacePageView/>
     </DataTemplate>
-    <DataTemplate DataType="{x:Type partialviewmodel:ClientsFormViewModel}">
-        <partialview:ClientsForm/>
+    <DataTemplate DataType="{x:Type partialviewmodelclients:ClientsFormViewModel}">
+        <partialviewclients:ClientsForm/>
     </DataTemplate>
-    <DataTemplate DataType="{x:Type partialviewmodel:ClientsListViewModel}">
-        <partialview:ClientsList/>
+    <DataTemplate DataType="{x:Type partialviewmodelclients:ClientsListViewModel}">
+        <partialviewclients:ClientsList/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type partialviewmodelemployees:EmployeesFormViewModel}">
+        <partialviewemployees:EmployeesForm/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type partialviewmodelemployees:EmployeesListViewModel}">
+        <partialviewemployees:EmployeesList/>
     </DataTemplate>
 </ResourceDictionary>

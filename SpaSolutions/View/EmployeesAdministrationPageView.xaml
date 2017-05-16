@@ -5,8 +5,92 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:SpaSolutions.View"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
+             d:DesignHeight="600" d:DesignWidth="600"
+             xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+             xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+             xmlns:tools="clr-namespace:SpaSolutions.Tools">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <tools:BooleanConverter x:Key="BooleanConverter"></tools:BooleanConverter>
+        </ResourceDictionary>
+    </UserControl.Resources>
     <Grid>
-            
+        <Controls:ProgressRing IsActive="{Binding GetEmployeesTask.IsNotCompleted}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <DockPanel Visibility="{Binding GetEmployeesTask.IsSuccessfullyCompleted, Converter={StaticResource BooleanConverter} }">
+            <Grid DockPanel.Dock="Top" Height="100" Width="Auto"  Background="Black">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width=".05*"/>
+                    <ColumnDefinition Width=".9*"/>
+                    <ColumnDefinition Width=".05*"/>
+                </Grid.ColumnDefinitions>
+                <Button Width="42"
+                        Height="42"
+                        Style="{DynamicResource MetroCircleButtonStyle}"
+                        HorizontalAlignment="Center" VerticalAlignment="Center"
+                        Command="{Binding ReturnToMainMenuCommand}">
+                    <iconPacks:PackIconMaterial Kind="ArrowLeftBoldCircleOutline" Width="32" Height="32" Foreground="White"/>
+                </Button>
+                <TextBlock 
+                   Grid.Column="1"
+                   VerticalAlignment="Center"
+                   Text="Empleados"
+                   FontWeight="UltraBold"
+                   FontStyle="Oblique"
+                   FontSize="30"
+                   FontFamily="Segoe UI"
+                   Foreground="White"/>
+                <!--Title-->
+            </Grid>
+
+            <StackPanel DockPanel.Dock="Left" Width="225" Background="LightGray">
+
+                <TextBlock
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    FontWeight="ExtraBold"
+                    FontSize="25"
+                    Foreground="White"
+                    Text="Estadisticas"/>
+
+                <Grid Background="White"  Margin="5 10 5 10" Height="Auto">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height=".1*"/>
+                        <RowDefinition Height=".8*"/>
+                        <RowDefinition Height=".1*"/>
+                    </Grid.RowDefinitions>
+
+                    <Label FontWeight="DemiBold" Grid.ColumnSpan="2" FontSize="15" HorizontalAlignment="Center">Numero de Empleados</Label>
+                    <iconPacks:PackIconMaterial Grid.Row="1" Kind="AccountMultiple" HorizontalAlignment="Center" VerticalAlignment="Center" Height="64" Width="64"/>
+                    <Label Grid.Column="1" Grid.Row="1" FontSize="30" FontWeight="DemiBold" Content="{Binding EmployeesQuantity}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                </Grid>
+
+                <Grid Background="White"  Margin="5 10 5 10" Height="Auto">
+                    <Grid.InputBindings>
+                        <MouseBinding Gesture="LeftDoubleClick" Command="{Binding EmployeesWithAppoitments}"/>
+                    </Grid.InputBindings>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height=".1*"/>
+                        <RowDefinition Height=".8*"/>
+                        <RowDefinition Height=".1*"/>
+                    </Grid.RowDefinitions>
+
+                    <Label FontWeight="DemiBold" Grid.ColumnSpan="2" FontSize="15" HorizontalAlignment="Center">Citas de Hoy</Label>
+                    <iconPacks:PackIconFontAwesome Grid.Row="1" Kind="AddressBook" HorizontalAlignment="Center" VerticalAlignment="Center" Height="64" Width="64"/>
+                    <Label Grid.Column="1" Grid.Row="1" FontSize="30" FontWeight="DemiBold" Content="{Binding SalesOnProcess}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                </Grid>
+
+            </StackPanel>
+
+            <Controls:TransitioningContentControl  Content="{Binding CurrentAction}" x:Name="transitioning" Transition="RightReplace" />
+
+        </DockPanel>
     </Grid>
 </UserControl>

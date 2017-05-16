@@ -24,3 +24,18 @@ C:\Users\Usuario\Source\Workspaces\SpaSolutions\ServiceDomain\bin\Debug\Newtonso
 C:\Users\Usuario\Source\Workspaces\SpaSolutions\ServiceDomain\obj\Debug\ServiceDomain.csprojResolveAssemblyReference.cache
 C:\Users\Usuario\Source\Workspaces\SpaSolutions\ServiceDomain\obj\Debug\ServiceDomain.dll
 C:\Users\Usuario\Source\Workspaces\SpaSolutions\ServiceDomain\obj\Debug\ServiceDomain.pdb
+C:\Users\Xaandia\Documents\Visual Studio 2015\Projects\StkWorkspace\Spasa\ServiceDomain\bin\Debug\ServiceDomain.dll
+C:\Users\Xaandia\Documents\Visual Studio 2015\Projects\StkWorkspace\Spasa\ServiceDomain\bin\Debug\ServiceDomain.pdb
+C:\Users\Xaandia\Documents\Visual Studio 2015\Projects\StkWorkspace\Spasa\ServiceDomain\bin\Debug\AutoMapper.dll
+C:\Users\Xaandia\Documents\Visual Studio 2015\Projects\StkWorkspace\Spasa\ServiceDomain\bin\Debug\DataModel.dll
+C:\Users\Xaandia\Documents\Visual Studio 2015\Projects\StkWorkspace\Spasa\ServiceDomain\bin\Debug\Gateway.dll
+C:\Users\Xaandia\Documents\Visual Studio 2015\Projects\StkWorkspace\Spasa\ServiceDomain\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Xaandia\Documents\Visual Studio 2015\Projects\StkWorkspace\Spasa\ServiceDomain\bin\Debug\DataModel.pdb
+C:\Users\Xaandia\Documents\Visual Studio 2015\Projects\StkWorkspace\Spasa\ServiceDomain\bin\Debug\Gateway.pdb
+C:\Users\Xaandia\Documents\Visual Studio 2015\Projects\StkWorkspace\Spasa\ServiceDomain\bin\Debug\AutoMapper.xml
+C:\Users\Xaandia\Documents\Visual Studio 2015\Projects\StkWorkspace\Spasa\ServiceDomain\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Xaandia\Documents\Visual Studio 2015\Projects\StkWorkspace\Spasa\ServiceDomain\obj\Debug\ServiceDomain.csprojResolveAssemblyReference.cache
+C:\Users\Xaandia\Documents\Visual Studio 2015\Projects\StkWorkspace\Spasa\ServiceDomain\obj\Debug\ServiceDomain.dll
+C:\Users\Xaandia\Documents\Visual Studio 2015\Projects\StkWorkspace\Spasa\ServiceDomain\obj\Debug\ServiceDomain.pdb
+C:\Users\Xaandia\Documents\Visual Studio 2015\Projects\StkWorkspace\Spasa\ServiceDomain\bin\Debug\DebuggingTools.dll
+C:\Users\Xaandia\Documents\Visual Studio 2015\Projects\StkWorkspace\Spasa\ServiceDomain\bin\Debug\DebuggingTools.pdb

@@ -71,7 +71,7 @@
                 
                 <Grid Background="White"  Margin="5 10 5 10" Height="Auto">
                     <Grid.InputBindings>
-                        <MouseBinding Gesture="LeftDoubleClick" Command="{Binding ClientsWhitOpenSales}"/>
+                        <MouseBinding Gesture="LeftDoubleClick" Command="{Binding ClientsWithOpenSalesCommand}"/>
                     </Grid.InputBindings>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
@@ -90,7 +90,7 @@
                 
                 <Grid Background="White"  Margin="5 10 5 10" Height="Auto">
                     <Grid.InputBindings>
-                        <MouseBinding Gesture="LeftDoubleClick" Command="{Binding ClientsWithAppointmens}"/>
+                        <MouseBinding Gesture="LeftDoubleClick" Command="{Binding ClientsWithAppointmensCommand}"/>
                     </Grid.InputBindings>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>

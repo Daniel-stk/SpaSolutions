@@ -1,0 +1,46 @@
+﻿<UserControl x:Class="SpaSolutions.PartialView.Employees.EmployeesList"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+              xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+             mc:Ignorable="d"
+             xmlns:interactivity="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+             d:DesignHeight="600" d:DesignWidth="600">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width=".05*"/>
+            <ColumnDefinition Width=".9*"/>
+            <ColumnDefinition Width=".05*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".1*"/>
+            <RowDefinition Height=".85*"/>
+            <RowDefinition Height=".05*"/>
+        </Grid.RowDefinitions>
+
+        <Button Width="52"
+                        Height="52"
+                        Grid.Column="1"
+                        Command="{Binding AddEmployeeCommand}"
+                        Style="{DynamicResource MetroCircleButtonStyle}"
+                        HorizontalAlignment="Right" VerticalAlignment="Center">
+            <iconPacks:PackIconMaterial Kind="AccountPlus" Width="32" Height="32" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Button>
+        <DataGrid Grid.Row="1" Grid.Column="1" ItemsSource="{Binding Employees}" AutoGenerateColumns="False" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding EmployeeId}" Visibility="Hidden"/>
+                <DataGridTextColumn  Binding="{Binding EmployeeName}" Header="Nombre"/>
+                <DataGridTextColumn  Binding="{Binding EmployeeAddress}" Header="Direccion"/>
+                <DataGridTextColumn  Binding="{Binding EmployeeHomePhone}" Header="Telefono"/>
+                <DataGridTextColumn  Binding="{Binding EmployeeCellPhone}" Header="Celular"/>
+            </DataGrid.Columns>
+            <interactivity:Interaction.Triggers>
+                <interactivity:EventTrigger EventName="SelectionChanged">
+                    <interactivity:InvokeCommandAction Command="{Binding EditEmployeeCommand , Mode=OneTime}" CommandParameter="{Binding Path=SelectedItem, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=DataGrid} }"/>
+                </interactivity:EventTrigger>
+            </interactivity:Interaction.Triggers>
+        </DataGrid>
+
+    </Grid>
+</UserControl>

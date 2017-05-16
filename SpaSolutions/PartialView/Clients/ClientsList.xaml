@@ -5,7 +5,8 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:SpaSolutions.PartialView.Clients"
              xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
-             mc:Ignorable="d" 
+             mc:Ignorable="d"
+             xmlns:interactivity="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
              d:DesignHeight="600" d:DesignWidth="600">
     <Grid>
         <Grid.ColumnDefinitions>
@@ -27,14 +28,20 @@
                         HorizontalAlignment="Right" VerticalAlignment="Center">
             <iconPacks:PackIconMaterial Kind="AccountPlus" Width="32" Height="32" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </Button>
-        <DataGrid Grid.Row="1" Grid.Column="1" ItemsSource="{Binding Clients}" AutoGenerateColumns="False">
+        <DataGrid Grid.Row="1" Grid.Column="1" ItemsSource="{Binding Clients}" AutoGenerateColumns="False" IsReadOnly="True">
             <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding ClientId}" Visibility="Hidden"/>
                 <DataGridTextColumn  Binding="{Binding ClientName}" Header="Nombre"/>
                 <DataGridTextColumn  Binding="{Binding ClientAddress}" Header="Direccion"/>
                 <DataGridTextColumn  Binding="{Binding ClientPhone}" Header="Telefono"/>
                 <DataGridTextColumn  Binding="{Binding ClientCellPhone}" Header="Celular"/>
                 <DataGridTextColumn Binding="{Binding ClientEmail}" Header="Correo"/>
             </DataGrid.Columns>
+            <interactivity:Interaction.Triggers>
+                <interactivity:EventTrigger EventName="SelectionChanged">
+                    <interactivity:InvokeCommandAction Command="{Binding EditClientCommand , Mode=OneTime}" CommandParameter="{Binding Path=SelectedItem, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=DataGrid} }"/>
+                </interactivity:EventTrigger>
+            </interactivity:Interaction.Triggers>
         </DataGrid>
 
     </Grid>

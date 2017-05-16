@@ -106,11 +106,20 @@
     <Compile Include="PartialViewModels\BaseForm.cs" />
     <Compile Include="PartialViewModels\Clients\ClientsFormViewModel.cs" />
     <Compile Include="PartialViewModels\Clients\ClientsListViewModel.cs" />
+    <Compile Include="PartialViewModels\Employees\EmployeesFormViewModel.cs" />
+    <Compile Include="PartialViewModels\Employees\EmployeesListViewModel.cs" />
+    <Compile Include="PartialViewModels\Workspaces\WorkspacesListViewModel.cs" />
     <Compile Include="PartialView\Clients\ClientsForm.xaml.cs">
       <DependentUpon>ClientsForm.xaml</DependentUpon>
     </Compile>
     <Compile Include="PartialView\Clients\ClientsList.xaml.cs">
       <DependentUpon>ClientsList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialView\Employees\EmployeesForm.xaml.cs">
+      <DependentUpon>EmployeesForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialView\Employees\EmployeesList.xaml.cs">
+      <DependentUpon>EmployeesList.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\EmployeesAdministrationPageViewModel.cs" />
     <Compile Include="ViewModel\InventoryAdministrationPageViewModel.cs" />
@@ -118,7 +127,7 @@
     <Compile Include="ViewModel\ReportsSystemPageViewModel.cs" />
     <Compile Include="ViewModel\ServiceAdministrationPageViewModel.cs" />
     <Compile Include="ViewModel\ViewModelBase.cs" />
-    <Compile Include="ViewModel\WalkInManagerPageViewModel.cs" />
+    <Compile Include="ViewModel\WorkspaceViewModel.cs" />
     <Compile Include="View\AgendaPageView.xaml.cs">
       <DependentUpon>AgendaPageView.xaml</DependentUpon>
     </Compile>
@@ -152,8 +161,8 @@
     <Compile Include="View\ServiceAdministrationPageView.xaml.cs">
       <DependentUpon>ServiceAdministrationPageView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\WalkInManagerPageView.xaml.cs">
-      <DependentUpon>WalkInManagerPageView.xaml</DependentUpon>
+    <Compile Include="View\WorkspacePageView.xaml.cs">
+      <DependentUpon>WorkspacePageView.xaml</DependentUpon>
     </Compile>
     <Page Include="AccentStyleWindow.xaml">
       <SubType>Designer</SubType>
@@ -164,6 +173,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="PartialView\Clients\ClientsList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PartialView\Employees\EmployeesForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PartialView\Employees\EmployeesList.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -239,7 +256,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\WalkInManagerPageView.xaml">
+    <Page Include="View\WorkspacePageView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -300,6 +317,10 @@
     <ProjectReference Include="..\DebuggingTools\DebuggingTools.csproj">
       <Project>{381c00e8-d4f3-46a7-99ef-8951c1f5f626}</Project>
       <Name>DebuggingTools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Gateway\Gateway.csproj">
+      <Project>{31028FFD-E99F-4DD0-89D4-F6558FE96EF9}</Project>
+      <Name>Gateway</Name>
     </ProjectReference>
     <ProjectReference Include="..\ServiceDomain\ServiceDomain.csproj">
       <Project>{856e02c8-62ab-4a5d-bdc7-fed17f20b03f}</Project>

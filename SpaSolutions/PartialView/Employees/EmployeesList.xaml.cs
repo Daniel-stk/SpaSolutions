@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace SpaSolutions.View
+namespace SpaSolutions.PartialView.Employees
 {
     /// <summary>
-    /// Interaction logic for WalkInManagerPageView.xaml
+    /// Interaction logic for EmployeesList.xaml
     /// </summary>
-    public partial class WalkInManagerPageView : UserControl
+    public partial class EmployeesList : UserControl
     {
-        public WalkInManagerPageView()
+        public EmployeesList()
         {
             InitializeComponent();
         }

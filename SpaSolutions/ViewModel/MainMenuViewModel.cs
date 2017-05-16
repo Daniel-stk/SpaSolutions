@@ -35,6 +35,7 @@ namespace SpaSolutions.ViewModel
             LoadInventoryAdministrationPageCommand = new DelegateCommand(o => LoadInventoryAdministrationPage());
             LoadLoyaltySystemPageCommand = new DelegateCommand(o => LoadReportsSystemPage());
             LoadReportsSystemPageCommand = new DelegateCommand(o => LoadReportsSystemPage());
+            LoadEmployeesAdministrationPageCommand = new DelegateCommand(o => LoadEmployeesAdministrationPage());
         }
 
         private void LoadAgendaPage()
@@ -59,7 +60,7 @@ namespace SpaSolutions.ViewModel
         private void LoadWalkInManagerPage()
         {
             MainWindowViewModel.Instance.Animation = "LEFT";
-            MainWindowViewModel.Instance.CurrentView = ViewModelFactory<WalkInManagerPageViewModel>.GetView("WalkInManagerPage");
+            MainWindowViewModel.Instance.CurrentView = ViewModelFactory<WorkspacePageViewModel>.GetView("WorkspacePage");
         }
 
         private void LoadServiceAdministrationPage()

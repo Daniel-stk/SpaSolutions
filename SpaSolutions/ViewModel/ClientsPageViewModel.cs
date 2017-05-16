@@ -65,7 +65,7 @@ namespace SpaSolutions.ViewModel
         public ViewModelBase CurrentAction
         {
             get { return _currentAction; }
-            set { _currentAction = value; OnPropertyChanged("CurrentAction"); }
+            set { _currentAction = value; ClientsQuantity = Clients.Count; OnPropertyChanged("CurrentAction"); }
         }
 
 
