@@ -62,13 +62,19 @@
     <Compile Include="ClientGateway.cs" />
     <Compile Include="DataTransferObjects\ClientDto.cs" />
     <Compile Include="DataTransferObjects\EmployeeDto.cs" />
+    <Compile Include="DataTransferObjects\ServiceDiscountDto.cs" />
+    <Compile Include="DataTransferObjects\ServiceDto.cs" />
     <Compile Include="DataTransferObjects\WorkspaceDto.cs" />
     <Compile Include="EmployeeGateway.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Response\ClientDataSetResponse.cs" />
     <Compile Include="Response\EmployeeDataSetResponse.cs" />
     <Compile Include="Response\Response.cs" />
+    <Compile Include="Response\ServiceDataSetResponse.cs" />
+    <Compile Include="Response\ServiceDiscountActionsResponse.cs" />
+    <Compile Include="Response\ServiceDiscountsDataResponse.cs" />
     <Compile Include="Response\WorkspaceDataSetResponse.cs" />
+    <Compile Include="ServiceGateway.cs" />
     <Compile Include="WorkspaceGateway.cs" />
   </ItemGroup>
   <ItemGroup>

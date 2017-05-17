@@ -7,7 +7,10 @@
                     xmlns:partialviewmodelclients="clr-namespace:SpaSolutions.PartialViewModels.Clients"
                     xmlns:partialviewemployees="clr-namespace:SpaSolutions.PartialView.Employees"
                     xmlns:partialviewmodelemployees="clr-namespace:SpaSolutions.PartialViewModels.Employees"
-                    
+                    xmlns:partialviewworkspaces="clr-namespace:SpaSolutions.PartialView.Workspaces"
+                    xmlns:partialviewmodelworkspaces="clr-namespace:SpaSolutions.PartialViewModels.Workspaces"
+                    xmlns:partialviewservices="clr-namespace:SpaSolutions.PartialView.Services"
+                    xmlns:partialviewmodelservices="clr-namespace:SpaSolutions.PartialViewModels.Services"
                     >
     <DataTemplate DataType="{x:Type viewmodel:MainMenuViewModel}">
         <view:MainMenuView/>
@@ -50,5 +53,17 @@
     </DataTemplate>
     <DataTemplate DataType="{x:Type partialviewmodelemployees:EmployeesListViewModel}">
         <partialviewemployees:EmployeesList/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type partialviewmodelworkspaces:WorkspacesListViewModel}">
+        <partialviewworkspaces:WorkspacesList/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type partialviewmodelworkspaces:WorkspaceFormViewModel}">
+        <partialviewworkspaces:WorkspaceForm/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type partialviewmodelservices:ServicesFormViewModel}">
+        <partialviewservices:ServiceForm/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type partialviewmodelservices:ServicesListViewModel}">
+        <partialviewservices:ServicesList/>
     </DataTemplate>
 </ResourceDictionary>

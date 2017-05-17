@@ -108,6 +108,9 @@
     <Compile Include="PartialViewModels\Clients\ClientsListViewModel.cs" />
     <Compile Include="PartialViewModels\Employees\EmployeesFormViewModel.cs" />
     <Compile Include="PartialViewModels\Employees\EmployeesListViewModel.cs" />
+    <Compile Include="PartialViewModels\Services\ServicesFormViewModel.cs" />
+    <Compile Include="PartialViewModels\Services\ServicesListViewModel.cs" />
+    <Compile Include="PartialViewModels\Workspaces\WorkspaceFormViewModel.cs" />
     <Compile Include="PartialViewModels\Workspaces\WorkspacesListViewModel.cs" />
     <Compile Include="PartialView\Clients\ClientsForm.xaml.cs">
       <DependentUpon>ClientsForm.xaml</DependentUpon>
@@ -120,6 +123,18 @@
     </Compile>
     <Compile Include="PartialView\Employees\EmployeesList.xaml.cs">
       <DependentUpon>EmployeesList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialView\Services\ServiceForm.xaml.cs">
+      <DependentUpon>ServiceForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialView\Services\ServicesList.xaml.cs">
+      <DependentUpon>ServicesList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialView\Workspaces\WorkspaceForm.xaml.cs">
+      <DependentUpon>WorkspaceForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartialView\Workspaces\WorkspacesList.xaml.cs">
+      <DependentUpon>WorkspacesList.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\EmployeesAdministrationPageViewModel.cs" />
     <Compile Include="ViewModel\InventoryAdministrationPageViewModel.cs" />
@@ -181,6 +196,22 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="PartialView\Employees\EmployeesList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PartialView\Services\ServiceForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PartialView\Services\ServicesList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PartialView\Workspaces\WorkspaceForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PartialView\Workspaces\WorkspacesList.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

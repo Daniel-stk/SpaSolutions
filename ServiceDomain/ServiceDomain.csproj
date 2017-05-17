@@ -50,6 +50,7 @@
     <Compile Include="EmployeeService.cs" />
     <Compile Include="Exceptions\NoResponseException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServicesService.cs" />
     <Compile Include="WorkspaceService.cs" />
   </ItemGroup>
   <ItemGroup>

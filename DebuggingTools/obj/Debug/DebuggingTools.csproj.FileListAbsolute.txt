@@ -11,3 +11,4 @@ C:\Users\Xaandia\Documents\Visual Studio 2015\Projects\StkWorkspace\Spasa\Debugg
 C:\Users\Xaandia\Documents\Visual Studio 2015\Projects\StkWorkspace\Spasa\DebuggingTools\bin\Debug\DebuggingTools.pdb
 C:\Users\Xaandia\Documents\Visual Studio 2015\Projects\StkWorkspace\Spasa\DebuggingTools\obj\Debug\DebuggingTools.dll
 C:\Users\Xaandia\Documents\Visual Studio 2015\Projects\StkWorkspace\Spasa\DebuggingTools\obj\Debug\DebuggingTools.pdb
+C:\Users\Xaandia\Documents\Visual Studio 2015\Projects\StkWorkspace\Spasa\DebuggingTools\obj\Debug\DebuggingTools.csprojResolveAssemblyReference.cache

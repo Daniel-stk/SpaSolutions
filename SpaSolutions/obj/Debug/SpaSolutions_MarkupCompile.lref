@@ -1,8 +1,12 @@
-﻿C:\Users\Xaandia\Documents\Visual Studio 2015\Projects\StkWorkspace\Spasa\SpaSolutions\obj\Debug\GeneratedInternalTypeHelper.g.cs
+﻿
 FC:\Users\Xaandia\Documents\Visual Studio 2015\Projects\StkWorkspace\Spasa\SpaSolutions\App.xaml;;
 FC:\Users\Xaandia\Documents\Visual Studio 2015\Projects\StkWorkspace\Spasa\SpaSolutions\PartialView\Clients\ClientsForm.xaml;;
 FC:\Users\Xaandia\Documents\Visual Studio 2015\Projects\StkWorkspace\Spasa\SpaSolutions\PartialView\Clients\ClientsList.xaml;;
 FC:\Users\Xaandia\Documents\Visual Studio 2015\Projects\StkWorkspace\Spasa\SpaSolutions\PartialView\Employees\EmployeesForm.xaml;;
+FC:\Users\Xaandia\Documents\Visual Studio 2015\Projects\StkWorkspace\Spasa\SpaSolutions\PartialView\Services\ServiceForm.xaml;;
+FC:\Users\Xaandia\Documents\Visual Studio 2015\Projects\StkWorkspace\Spasa\SpaSolutions\PartialView\Services\ServicesList.xaml;;
+FC:\Users\Xaandia\Documents\Visual Studio 2015\Projects\StkWorkspace\Spasa\SpaSolutions\PartialView\Workspaces\WorkspaceForm.xaml;;
+FC:\Users\Xaandia\Documents\Visual Studio 2015\Projects\StkWorkspace\Spasa\SpaSolutions\PartialView\Workspaces\WorkspacesList.xaml;;
 FC:\Users\Xaandia\Documents\Visual Studio 2015\Projects\StkWorkspace\Spasa\SpaSolutions\View\AgendaPageView.xaml;;
 FC:\Users\Xaandia\Documents\Visual Studio 2015\Projects\StkWorkspace\Spasa\SpaSolutions\View\ClientsPageView.xaml;;
 FC:\Users\Xaandia\Documents\Visual Studio 2015\Projects\StkWorkspace\Spasa\SpaSolutions\View\EmployeesAdministrationPageView.xaml;;

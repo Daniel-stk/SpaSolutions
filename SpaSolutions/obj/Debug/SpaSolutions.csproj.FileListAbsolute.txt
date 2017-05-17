@@ -144,3 +144,11 @@ C:\Users\Xaandia\Documents\Visual Studio 2015\Projects\StkWorkspace\Spasa\SpaSol
 C:\Users\Xaandia\Documents\Visual Studio 2015\Projects\StkWorkspace\Spasa\SpaSolutions\obj\Debug\PartialView\Employees\EmployeesForm.baml
 C:\Users\Xaandia\Documents\Visual Studio 2015\Projects\StkWorkspace\Spasa\SpaSolutions\obj\Debug\View\WorkspacePageView.g.cs
 C:\Users\Xaandia\Documents\Visual Studio 2015\Projects\StkWorkspace\Spasa\SpaSolutions\obj\Debug\View\WorkspacePageView.baml
+C:\Users\Xaandia\Documents\Visual Studio 2015\Projects\StkWorkspace\Spasa\SpaSolutions\obj\Debug\PartialView\Workspaces\WorkspaceForm.g.cs
+C:\Users\Xaandia\Documents\Visual Studio 2015\Projects\StkWorkspace\Spasa\SpaSolutions\obj\Debug\PartialView\Workspaces\WorkspacesList.g.cs
+C:\Users\Xaandia\Documents\Visual Studio 2015\Projects\StkWorkspace\Spasa\SpaSolutions\obj\Debug\PartialView\Workspaces\WorkspaceForm.baml
+C:\Users\Xaandia\Documents\Visual Studio 2015\Projects\StkWorkspace\Spasa\SpaSolutions\obj\Debug\PartialView\Workspaces\WorkspacesList.baml
+C:\Users\Xaandia\Documents\Visual Studio 2015\Projects\StkWorkspace\Spasa\SpaSolutions\obj\Debug\PartialView\Services\ServiceForm.g.cs
+C:\Users\Xaandia\Documents\Visual Studio 2015\Projects\StkWorkspace\Spasa\SpaSolutions\obj\Debug\PartialView\Services\ServicesList.g.cs
+C:\Users\Xaandia\Documents\Visual Studio 2015\Projects\StkWorkspace\Spasa\SpaSolutions\obj\Debug\PartialView\Services\ServiceForm.baml
+C:\Users\Xaandia\Documents\Visual Studio 2015\Projects\StkWorkspace\Spasa\SpaSolutions\obj\Debug\PartialView\Services\ServicesList.baml

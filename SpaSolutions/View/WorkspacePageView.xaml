@@ -84,7 +84,7 @@
 
                     <Label FontWeight="DemiBold" Grid.ColumnSpan="2" FontSize="15" HorizontalAlignment="Center">Citas de Hoy</Label>
                     <iconPacks:PackIconFontAwesome Grid.Row="1" Kind="AddressBook" HorizontalAlignment="Center" VerticalAlignment="Center" Height="64" Width="64"/>
-                    <Label Grid.Column="1" Grid.Row="1" FontSize="30" FontWeight="DemiBold" Content="{Binding SalesOnProcess}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <Label Grid.Column="1" Grid.Row="1" FontSize="30" FontWeight="DemiBold" Content="{Binding TodaysAppointments}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                 </Grid>
 
             </StackPanel>

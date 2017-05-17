@@ -18,6 +18,7 @@ namespace SpaSolutions.PartialViewModels.Employees
         public ICommand AddEmployeeCommand { get; private set; }
         public ICommand EditEmployeeCommand { get; private set; }
         public ObservableCollection<Employee> Employees { get { return _employee; } private set { _employee = value; OnPropertyChanged("Employees"); } }
+
         public EmployeesListViewModel(ObservableCollection<Employee> employees)
         {
             Employees = employees;

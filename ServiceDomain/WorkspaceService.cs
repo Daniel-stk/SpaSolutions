@@ -45,5 +45,16 @@ namespace ServiceDomain
             }
             return workspaces;
         }
+
+        public async Task<SingleResponse<int>> InsertOrEditWorkspace(Workspace workspace)
+        {
+            var workspaceDto = _mapper.Map<Workspace, WorkspaceDto>(workspace);
+            return await _gateway.WorkspaceActions(workspaceDto);
+        }
+
+        public async Task<SingleResponse<int>> DeleteWorkspace(Workspace workspace)
+        {
+            return await _gateway.DeleteWorkspace(workspace.WorkspaceId);
+        }
     }
 }
