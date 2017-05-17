@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Gateway.Tools;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +18,7 @@ namespace Gateway.Response
         public string ServiceName { get; set; }
         [JsonProperty("service_price")]
         public decimal ServicePrice { get; set; }
+        [JsonConverter(typeof(BooleanConverter))]
         [JsonProperty("active")]
         public bool Active { get; set; }
     }

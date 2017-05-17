@@ -42,7 +42,6 @@ C:\Users\Usuario\Source\Workspaces\SpaSolutions\SpaSolutions\obj\Debug\MainWindo
 C:\Users\Usuario\Source\Workspaces\SpaSolutions\SpaSolutions\obj\Debug\View\ReportsSystemPageView.g.cs
 C:\Users\Usuario\Source\Workspaces\SpaSolutions\SpaSolutions\obj\Debug\View\RetailPointPageView.g.cs
 C:\Users\Usuario\Source\Workspaces\SpaSolutions\SpaSolutions\obj\Debug\View\ServiceAdministrationPageView.g.cs
-C:\Users\Usuario\Source\Workspaces\SpaSolutions\SpaSolutions\obj\Debug\View\WalkInManagerPageView.g.cs
 C:\Users\Usuario\Source\Workspaces\SpaSolutions\SpaSolutions\obj\Debug\App.g.cs
 C:\Users\Usuario\Source\Workspaces\SpaSolutions\SpaSolutions\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\Usuario\Source\Workspaces\SpaSolutions\SpaSolutions\obj\Debug\SpaSolutions_MarkupCompile.cache
@@ -59,7 +58,6 @@ C:\Users\Usuario\Source\Workspaces\SpaSolutions\SpaSolutions\obj\Debug\Resources
 C:\Users\Usuario\Source\Workspaces\SpaSolutions\SpaSolutions\obj\Debug\View\ReportsSystemPageView.baml
 C:\Users\Usuario\Source\Workspaces\SpaSolutions\SpaSolutions\obj\Debug\View\RetailPointPageView.baml
 C:\Users\Usuario\Source\Workspaces\SpaSolutions\SpaSolutions\obj\Debug\View\ServiceAdministrationPageView.baml
-C:\Users\Usuario\Source\Workspaces\SpaSolutions\SpaSolutions\obj\Debug\View\WalkInManagerPageView.baml
 C:\Users\Usuario\Source\Workspaces\SpaSolutions\SpaSolutions\obj\Debug\SpaSolutions.g.resources
 C:\Users\Usuario\Source\Workspaces\SpaSolutions\SpaSolutions\obj\Debug\SpaSolutions.Properties.Resources.resources
 C:\Users\Usuario\Source\Workspaces\SpaSolutions\SpaSolutions\obj\Debug\SpaSolutions.csproj.GenerateResource.Cache
@@ -152,3 +150,17 @@ C:\Users\Xaandia\Documents\Visual Studio 2015\Projects\StkWorkspace\Spasa\SpaSol
 C:\Users\Xaandia\Documents\Visual Studio 2015\Projects\StkWorkspace\Spasa\SpaSolutions\obj\Debug\PartialView\Services\ServicesList.g.cs
 C:\Users\Xaandia\Documents\Visual Studio 2015\Projects\StkWorkspace\Spasa\SpaSolutions\obj\Debug\PartialView\Services\ServiceForm.baml
 C:\Users\Xaandia\Documents\Visual Studio 2015\Projects\StkWorkspace\Spasa\SpaSolutions\obj\Debug\PartialView\Services\ServicesList.baml
+C:\Users\Usuario\Source\Workspaces\SpaSolutions\SpaSolutions\obj\Debug\PartialView\Employees\EmployeesList.baml
+C:\Users\Usuario\Source\Workspaces\SpaSolutions\SpaSolutions\obj\Debug\PartialView\Employees\EmployeesForm.g.cs
+C:\Users\Usuario\Source\Workspaces\SpaSolutions\SpaSolutions\obj\Debug\PartialView\Employees\EmployeesList.g.cs
+C:\Users\Usuario\Source\Workspaces\SpaSolutions\SpaSolutions\obj\Debug\PartialView\Services\ServiceForm.g.cs
+C:\Users\Usuario\Source\Workspaces\SpaSolutions\SpaSolutions\obj\Debug\PartialView\Services\ServicesList.g.cs
+C:\Users\Usuario\Source\Workspaces\SpaSolutions\SpaSolutions\obj\Debug\PartialView\Workspaces\WorkspaceForm.g.cs
+C:\Users\Usuario\Source\Workspaces\SpaSolutions\SpaSolutions\obj\Debug\PartialView\Workspaces\WorkspacesList.g.cs
+C:\Users\Usuario\Source\Workspaces\SpaSolutions\SpaSolutions\obj\Debug\View\WorkspacePageView.g.cs
+C:\Users\Usuario\Source\Workspaces\SpaSolutions\SpaSolutions\obj\Debug\PartialView\Employees\EmployeesForm.baml
+C:\Users\Usuario\Source\Workspaces\SpaSolutions\SpaSolutions\obj\Debug\PartialView\Services\ServiceForm.baml
+C:\Users\Usuario\Source\Workspaces\SpaSolutions\SpaSolutions\obj\Debug\PartialView\Services\ServicesList.baml
+C:\Users\Usuario\Source\Workspaces\SpaSolutions\SpaSolutions\obj\Debug\PartialView\Workspaces\WorkspaceForm.baml
+C:\Users\Usuario\Source\Workspaces\SpaSolutions\SpaSolutions\obj\Debug\PartialView\Workspaces\WorkspacesList.baml
+C:\Users\Usuario\Source\Workspaces\SpaSolutions\SpaSolutions\obj\Debug\View\WorkspacePageView.baml

@@ -53,6 +53,8 @@ namespace SpaSolutions.PartialViewModels.Services
         public ServicesFormViewModel(Service service)
         {
             CreateCommands();
+            this.service = new Service();
+            this.service.ServiceDiscount = new ServiceDiscounts();
             ServiceId = service.ServiceId;
             ServiceName = service.ServiceName;
             ServicePrice = service.ServicePrice; 
@@ -65,8 +67,6 @@ namespace SpaSolutions.PartialViewModels.Services
                 EndDiscountDate = service.ServiceDiscount.EndDate;
                 ServiceDiscountActive = service.ServiceDiscount.Active;
             } 
-            this.service = new Service();
-            this.service.ServiceDiscount = new ServiceDiscounts();
             ServicePlaceHolder = ViewModelFactory<ServiceAdministrationPageViewModel>.GetView("ServiceAdministratorPage").Service;
             IsEdit = true;
             IsActionInProcess = false;

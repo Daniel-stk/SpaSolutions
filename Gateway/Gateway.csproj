@@ -75,6 +75,8 @@
     <Compile Include="Response\ServiceDiscountsDataResponse.cs" />
     <Compile Include="Response\WorkspaceDataSetResponse.cs" />
     <Compile Include="ServiceGateway.cs" />
+    <Compile Include="Tools\BooleanConverter.cs" />
+    <Compile Include="Tools\DateTimeConverter.cs" />
     <Compile Include="WorkspaceGateway.cs" />
   </ItemGroup>
   <ItemGroup>

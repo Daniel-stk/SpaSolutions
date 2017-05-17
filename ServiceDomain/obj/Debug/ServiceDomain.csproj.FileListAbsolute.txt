@@ -39,3 +39,5 @@ C:\Users\Xaandia\Documents\Visual Studio 2015\Projects\StkWorkspace\Spasa\Servic
 C:\Users\Xaandia\Documents\Visual Studio 2015\Projects\StkWorkspace\Spasa\ServiceDomain\obj\Debug\ServiceDomain.pdb
 C:\Users\Xaandia\Documents\Visual Studio 2015\Projects\StkWorkspace\Spasa\ServiceDomain\bin\Debug\DebuggingTools.dll
 C:\Users\Xaandia\Documents\Visual Studio 2015\Projects\StkWorkspace\Spasa\ServiceDomain\bin\Debug\DebuggingTools.pdb
+C:\Users\Usuario\Source\Workspaces\SpaSolutions\ServiceDomain\bin\Debug\DebuggingTools.dll
+C:\Users\Usuario\Source\Workspaces\SpaSolutions\ServiceDomain\bin\Debug\DebuggingTools.pdb
