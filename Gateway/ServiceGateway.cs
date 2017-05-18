@@ -110,15 +110,15 @@ namespace Gateway
             if (service.Active) { 
                 content.Add(new KeyValuePair<string, string>("active_service", service.Active.ToString()));
             }
-            if (service.ServiceDiscount.ServiceDiscount != 0)
+            if (service.ServiceDiscount.ServiceDiscount > 0)
             {
                 if(service.ServiceDiscount.ServiceDiscountId != 0)
                 {
-                    content.Add(new KeyValuePair<string, string>("servicediscount_id", service.ServiceId.ToString()));
+                    content.Add(new KeyValuePair<string, string>("service_discount_id", service.ServiceDiscount.ServiceDiscountId.ToString()));
                 }
                 content.Add(new KeyValuePair<string, string>("discount", service.ServiceDiscount.ServiceDiscount.ToString()));
-                content.Add(new KeyValuePair<string, string>("start", service.ServiceDiscount.StartDate.ToString()));
-                content.Add(new KeyValuePair<string, string>("end", service.ServiceDiscount.EndDate.ToString()));
+                content.Add(new KeyValuePair<string, string>("start", service.ServiceDiscount.StartDate.ToString("yyyy-MM-dd")));
+                content.Add(new KeyValuePair<string, string>("end", service.ServiceDiscount.EndDate.ToString("yyyy-MM-dd")));
                 if (service.ServiceDiscount.Active)
                 {
                     content.Add(new KeyValuePair<string, string>("active_discount", service.ServiceDiscount.Active.ToString()));

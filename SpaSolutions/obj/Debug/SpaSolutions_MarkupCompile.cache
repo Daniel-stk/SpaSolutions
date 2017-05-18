@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\Usuario\Source\Workspaces\SpaSolutions\SpaSolutions\obj\Debug\
+C:\Users\Xaandia\Documents\Visual Studio 2015\Projects\StkWorkspace\Spasa\SpaSolutions\obj\Debug\
 SpaSolutions
 none
 false
 DEBUG;TRACE
-C:\Users\Usuario\Source\Workspaces\SpaSolutions\SpaSolutions\App.xaml
+C:\Users\Xaandia\Documents\Visual Studio 2015\Projects\StkWorkspace\Spasa\SpaSolutions\App.xaml
 26-996005863
 
-471900609270
-25-1409153672
+481374864638
+28-1144679988
 AccentStyleWindow.xaml;PartialView\Clients\ClientsForm.xaml;PartialView\Clients\ClientsList.xaml;PartialView\Employees\EmployeesForm.xaml;PartialView\Employees\EmployeesList.xaml;PartialView\Services\ServiceForm.xaml;PartialView\Services\ServicesList.xaml;PartialView\Workspaces\WorkspaceForm.xaml;PartialView\Workspaces\WorkspacesList.xaml;View\AgendaPageView.xaml;View\ClientsPageView.xaml;CustomAccents\CustomAccent1.xaml;CustomAccents\CustomAccent2.xaml;CustomAccents\CustomTheme.xaml;View\EmployeesAdministrationPageView.xaml;View\InventoryAdministrationPageView.xaml;View\LoyaltySystemPageView.xaml;View\MainMenuView.xaml;MainWindow.xaml;Resources\Icons.xaml;Resources\IconsNonShared.xaml;Resources\TemplatesViewModelBinding.xaml;View\ReportsSystemPageView.xaml;View\RetailPointPageView.xaml;View\ServiceAdministrationPageView.xaml;View\WorkspacePageView.xaml;
 
 False

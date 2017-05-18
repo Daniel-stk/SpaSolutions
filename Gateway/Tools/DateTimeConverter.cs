@@ -17,7 +17,8 @@ namespace Gateway.Tools
 
         public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
         {
-            var date = DateTime.ParseExact(reader.Value.ToString(), "yyyy-MM-dd", CultureInfo.InvariantCulture);
+            var stringDate = reader.Value.ToString();
+            var date = DateTime.ParseExact(stringDate, "yyyy-MM-dd", CultureInfo.InvariantCulture);
             return date;
         }
 

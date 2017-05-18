@@ -22,7 +22,7 @@ namespace SpaSolutions.PartialViewModels.Services
         public int ServiceId { private get { return service.ServiceId; } set { service.ServiceId = value; } }
         public string ServiceName { get { return service.ServiceName; } set { service.ServiceName = value; OnPropertyChanged("ServiceName"); } }
         public decimal ServicePrice { get { return service.ServicePrice; } set { service.ServicePrice = value; OnPropertyChanged("ServicePrice"); } }
-        public bool ServiceActive { get { return service.Active; } set { service.Active = value; OnPropertyChanged("ServiceActive"); } }
+        public bool ServiceActive { get { return service.Active; } set { service.Active = value; if (AddDiscount) { AddDiscount = value; } OnPropertyChanged("ServiceActive"); } }
         public bool AddDiscount { get { return _addDiscount; } set { _addDiscount = value; ServiceDiscountActive = value; OnPropertyChanged("AddDiscount"); } }
         public int ServiceDisocuntId { get { return service.ServiceDiscount.ServiceDiscountId; } set { service.ServiceDiscount.ServiceDiscountId = value; } }
         public decimal ServiceDiscount { get { return service.ServiceDiscount.ServiceDiscount; } set { service.ServiceDiscount.ServiceDiscount = value; OnPropertyChanged("ServiceDiscount"); } }
@@ -57,7 +57,10 @@ namespace SpaSolutions.PartialViewModels.Services
             this.service.ServiceDiscount = new ServiceDiscounts();
             ServiceId = service.ServiceId;
             ServiceName = service.ServiceName;
-            ServicePrice = service.ServicePrice; 
+            ServicePrice = service.ServicePrice;
+            ServiceActive = service.Active;
+            StartDiscountDate = DateTime.Today;
+            EndDiscountDate = DateTime.Today.AddDays(1);
             if (service.ServiceDiscount != null)
             {
                 AddDiscount = service.ServiceDiscount.Active;
@@ -95,17 +98,20 @@ namespace SpaSolutions.PartialViewModels.Services
                             serviceToUpdate.ServiceName = ServiceName;
                             serviceToUpdate.ServicePrice = ServicePrice;
                             serviceToUpdate.Active = ServiceActive;
-                            if (AddDiscount)
+                            if (ServiceDiscount > 0)
                             {
-                                if(service.ServiceDiscount == null)
+                                if(serviceToUpdate.ServiceDiscount == null)
                                 {
-                                    service.ServiceDiscount = new ServiceDiscounts();
+                                    serviceToUpdate.ServiceDiscount = new ServiceDiscounts();
                                 }
-                                
-                                service.ServiceDiscount.ServiceDiscount = ServiceDiscount;
-                                service.ServiceDiscount.StartDate = StartDiscountDate;
-                                service.ServiceDiscount.EndDate = EndDiscountDate;
-                                service.ServiceDiscount.Active = ServiceDiscountActive; 
+                                if(serviceToUpdate.ServiceDiscount.ServiceDiscountId == 0)
+                                {
+                                    serviceToUpdate.ServiceDiscount.ServiceDiscountId = ActionWatcher.Result.Data.ServiceDiscountId;
+                                }
+                                serviceToUpdate.ServiceDiscount.ServiceDiscount = ServiceDiscount;
+                                serviceToUpdate.ServiceDiscount.StartDate = StartDiscountDate;
+                                serviceToUpdate.ServiceDiscount.EndDate = EndDiscountDate;
+                                serviceToUpdate.ServiceDiscount.Active = ServiceDiscountActive; 
                             }
                         }
                         else
